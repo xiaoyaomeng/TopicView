@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tvTypeRecyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="类型：RecyclerView不分页纯左右滑动"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/llTypeRecyclerView"
+        app:layout_constraintTop_toBottomOf="@id/tvTypeRecyclerView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/topicRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fadingEdge="none"
+            android:scrollbars="vertical" />
+
+        <RelativeLayout
+            android:id="@+id/parent_layout"
+            android:layout_marginTop="10dp"
+            android:layout_width="66dp"
+            android:layout_height="3dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_rect_home_topic_6dp_bg">
+            <View
+                android:id="@+id/main_line"
+                android:layout_width="33dp"
+                android:layout_height="3dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/shape_rect_home_topic_6dp_fg" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/llTypeRecyclerView"
+        android:layout_marginTop="20dp"
+        android:id="@+id/tvTypeViewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="类型：ViewPager分页左右滑动"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/llTypeViewPager"
+        app:layout_constraintTop_toBottomOf="@id/tvTypeViewPager"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/topicViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:id="@+id/topicIndicator"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="66dp"
+            android:layout_height="3dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shape_rect_home_topic_6dp_bg" />
+
+    </LinearLayout>
+
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/llTypeViewPager"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="From CSDN 胖虎：https://blog.csdn.net/ljphhj\n微信：ljphhj\n"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
